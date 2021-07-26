@@ -11,6 +11,7 @@
     body{
         margin: 0;
         background-color: #8f57fd;
+        font-family: 'Muli', sans-serif;
     }
 
     .header{
@@ -66,6 +67,33 @@
         text-decoration: none;
     }
 
+    .main{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title{
+        font-family: 'Muli', sans-serif;
+        color: white;
+        font-size: 25px;
+    }
+
+    .input{
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid white;
+        width: 70%;
+        color: white;
+        border-radius: 25px;
+        height: 50px;
+        font-family: 'Muli', sans-serif;
+        padding: 0 20px;
+        font-size: 16px;
+        outline: none;
+    }
+
 </style>
 
 <body>
@@ -86,5 +114,11 @@
             </ul>
         </div>
     </header>
+    <main>
+        <section class="main">
+            <h2 class="main__title">¿Qué quieres ver hoy?</h2>
+            <input class="input" type="text" placeholder="Buscar...">
+        </section>
+    </main>
 </body>
 </html>
