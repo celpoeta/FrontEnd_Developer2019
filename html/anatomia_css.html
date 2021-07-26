@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia CSS</title>
+</head>
+
+<style>
+    /* 
+     p{
+        color: red;
+    } */
+
+    /* p:first-child{
+        color: pink;
+    }
+ 
+    p:last-child{
+        color: pink;
+    } */
+    
+    p:nth-child(2n){
+        color: brown;
+    }
+
+    p:nth-child(2n+1){
+        color: pink;
+    }
+
+    p::first-letter{
+        color: red;
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <!-- <p>Hola Mundo Feliz</p>
+    <p>Hola Mundo</p> -->
+    <p>Perro 🐶</p>
+    <p>Cerdo 🐷</p>
+    <p>Delfin 🐬</p>
+    <p>Buho🦉</p>
+</body>
+
+</html>
