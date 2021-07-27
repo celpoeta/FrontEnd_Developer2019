@@ -19,11 +19,42 @@
       4.- Pos:Relative porque queremos que los elementos que hereden se ajusten con base en este elemento*/
 
     .carousel {
-        width: 100%;
         overflow: scroll;
         padding: 30px;
         position: relative;
     }
+
+    .carousel::-webkit-scrollbar {
+        width: 0px;
+        height: 5px;
+    }
+
+    /* Estilos barra (thumb) de scroll */
+    .carousel::-webkit-scrollbar-thumb {
+        background: #FCA3CC;
+        border-radius: 10px;
+    }
+
+    .carousel::-webkit-scrollbar-thumb:active {
+        background-color: #FDCFDF;
+    }
+
+    .carousel::-webkit-scrollbar-thumb:hover {
+        background: #FCA3CC;
+    }
+
+    /* Estilos track de scroll */
+    .carousel::-webkit-scrollbar-track {
+        background: #FDCFDF;
+        border-radius: 0px;
+    }
+
+    .carousel::-webkit-scrollbar-track:hover,
+    .carousel::-webkit-scrollbar-track:active {
+        background: #FDCFDF;
+    }
+
+
 
     /* 1.- WhiteSpace nowrap Enlista todos los elementos en un solo renglón.
        2.- Establecemmos un pequeño espaciado entre los elementos de la lista.
@@ -53,7 +84,7 @@
     */
 
     .carousel-item {
-        background-color: brown;
+        background-color: pink;
         width: 200px;
         height: 250px;
         border-radius: 30px;
@@ -63,6 +94,7 @@
         cursor: pointer;
         transition: 450ms;
         transform-origin: center left;
+        position: relative;
     }
 
     /*
@@ -100,17 +132,141 @@
         transform: scale(1.5);
         opacity: 1;
     }
+
+    .carousel-item__img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .carousel-item__details {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+        font-size: 15px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .carousel-item__details:hover {
+        opacity: 1;
+    }
+
+    .carousel-item__details--title {
+        color: white;
+        font-weight: bolder;
+    }
+
+    .carousel-item__details--subtitle {
+        color: white;
+        font-size: px;
+    }
+
+    .carousel-item__details--icons img {
+        width: 30px;
+        height: 30px;
+    }
 </style>
 
 <body>
     <main>
         <section class="carousel">
             <div class="carousel__container">
-                <div class="carousel-item"></div>
-                <div class="carousel-item"></div>
-                <div class="carousel-item"></div>
-                <div class="carousel-item"></div>
-                <div class="carousel-item"></div>
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://source.unsplash.com/random?heart" alt="imagen">
+                    <div class="carousel-item__details">
+                        <div class="carousel-item__details--icons">
+                            <img src="../icon/icons8-play-64.png" alt="Play">
+                            <img src="../icon/icons8-plus-64.png" alt="Plus">
+                        </div>
+                        <p class="carousel-item__details--title">Titulo</p>
+                        <p class="carousel-item__details--subtitle">2021 16+ 114 minutos</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://source.unsplash.com/random?music" alt="imagen">
+                    <div class="carousel-item__details">
+                        <div class="carousel-item__details--icons">
+                            <img src="../icon/icons8-play-64.png" alt="Play">
+                            <img src="../icon/icons8-plus-64.png" alt="Plus">
+                        </div>
+                        <p class="carousel-item__details--title">Titulo</p>
+                        <p class="carousel-item__details--subtitle">2021 16+ 114 minutos</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://source.unsplash.com/random?people" alt="imagen">
+                    <div class="carousel-item__details">
+                        <div class="carousel-item__details--icons">
+                            <img src="../icon/icons8-play-64.png" alt="Play">
+                            <img src="../icon/icons8-plus-64.png" alt="Plus">
+                        </div>
+                        <p class="carousel-item__details--title">Titulo</p>
+                        <p class="carousel-item__details--subtitle">2021 16+ 114 minutos</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://source.unsplash.com/random?rock" alt="imagen">
+                    <div class="carousel-item__details">
+                        <div class="carousel-item__details--icons">
+                            <img src="../icon/icons8-play-64.png" alt="Play">
+                            <img src="../icon/icons8-plus-64.png" alt="Plus">
+                        </div>
+                        <p class="carousel-item__details--title">Titulo</p>
+                        <p class="carousel-item__details--subtitle">2021 16+ 114 minutos</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://source.unsplash.com/random?tiger" alt="imagen">
+                    <div class="carousel-item__details">
+                        <div class="carousel-item__details--icons">
+                            <img src="../icon/icons8-play-64.png" alt="Play">
+                            <img src="../icon/icons8-plus-64.png" alt="Plus">
+                        </div>
+                        <p class="carousel-item__details--title">Titulo</p>
+                        <p class="carousel-item__details--subtitle">2021 16+ 114 minutos</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://source.unsplash.com/random?pink" alt="imagen">
+                    <div class="carousel-item__details">
+                        <div class="carousel-item__details--icons">
+                            <img src="../icon/icons8-play-64.png" alt="Play">
+                            <img src="../icon/icons8-plus-64.png" alt="Plus">
+                        </div>
+                        <p class="carousel-item__details--title">Titulo</p>
+                        <p class="carousel-item__details--subtitle">2021 16+ 114 minutos</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://source.unsplash.com/random?electric" alt="imagen">
+                    <div class="carousel-item__details">
+                        <div class="carousel-item__details--icons">
+                            <img src="../icon/icons8-play-64.png" alt="Play">
+                            <img src="../icon/icons8-plus-64.png" alt="Plus">
+                        </div>
+                        <p class="carousel-item__details--title">Titulo</p>
+                        <p class="carousel-item__details--subtitle">2021 16+ 114 minutos</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://source.unsplash.com/random?luz" alt="imagen">
+                    <div class="carousel-item__details">
+                        <div class="carousel-item__details--icons">
+                            <img src="../icon/icons8-play-64.png" alt="Play">
+                            <img src="../icon/icons8-plus-64.png" alt="Plus">
+                        </div>
+                        <p class="carousel-item__details--title">Titulo</p>
+                        <p class="carousel-item__details--subtitle">2021 16+ 114 minutos</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
