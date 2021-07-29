@@ -1,10 +1,10 @@
-body{
-    margin: 0;
+body {
+    margin: 0 0 50px 0;
     background-color: #8f57fd;
     font-family: 'Muli', sans-serif;
 }
 
-.header{
+.header {
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -12,30 +12,31 @@ body{
     padding: 10px;
 }
 
-.header__img{
+.header__img {
     width: 200px;
 }
 
-.header__menu{
+.header__menu {
     margin-right: 60px;
     text-align: right;
 }
 
-.header__menu:hover .header__menu--ul, .header__menu--ul:hover{
+.header__menu:hover .header__menu--ul,
+.header__menu--ul:hover {
     display: block;
 }
 
-.header__menu--profile{
+.header__menu--profile {
     display: flex;
     align-items: center;
 }
 
-.header__menu--profile p{
+.header__menu--profile p {
     color: white;
     padding-left: 10px;
 }
 
-.header__menu--ul{
+.header__menu--ul {
     display: none;
     list-style: none;
     padding: 0;
@@ -48,29 +49,31 @@ body{
 .header__menu--ul li {
     margin: 10px 0;
 }
+
 .header__menu--ul li a:hover {
     text-decoration: underline;
-} 
+}
+
 .header__menu--ul li a {
     color: white;
     text-decoration: none;
 }
 
-.main{
-    height: 300px;
+.main {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main__title{
+.main__title {
     font-family: 'Muli', sans-serif;
     color: white;
     font-size: 25px;
 }
 
-.input{
+.input {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     width: 70%;
@@ -81,4 +84,118 @@ body{
     padding: 0 20px;
     font-size: 16px;
     outline: none;
+}
+
+.input::placeholder{
+    color: white;
+}
+
+.carousel {
+    overflow: scroll;
+    margin: 0;
+    padding: 50px 30px 20px 30px;
+    text-align: center;
+}
+
+.carousel::-webkit-scrollbar {
+    width: 0px;
+    height: 7px;
+}
+
+/* Estilos barra (thumb) de scroll */
+.carousel::-webkit-scrollbar-thumb {
+    background: #FCA3CC;
+    border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb:active {
+    background-color: #FDCFDF;
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: #FCA3CC;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #FDCFDF;
+    border-radius: 0px;
+}
+
+.carousel::-webkit-scrollbar-track:hover,
+.carousel::-webkit-scrollbar-track:active {
+    background: #FDCFDF;
+}
+
+.carousel__container {
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding: 10px;
+}
+
+.carousel-item {
+    background-color: pink;
+    width: 200px;
+    height: 250px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carousel-item:hover~.carousel-item {
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carousel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 15px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.carousel-item__details:hover {
+    opacity: 1;
+}
+
+.carousel-item__details--title {
+    color: white;
+    font-weight: bolder;
+}
+
+.carousel-item__details--subtitle {
+    color: white;
+    font-size: px;
+}
+
+.carousel-item__details--icons img {
+    width: 30px;
+    height: 30px;
 }
