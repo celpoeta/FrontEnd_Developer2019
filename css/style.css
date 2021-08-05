@@ -61,7 +61,35 @@ body {
 
 
 .footer{
-    background: red;
+    display: flex;
+    align-items: center;
+    height: 97px;
+    width: 100%;
+}
+
+.footer__margin{
+    margin-top: 20%;
+}
+
+.footer__item{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer__item:hover{
+    text-decoration: underline;
+}
+
+.footer--verde{
+    background: #21c08b;
+}
+
+.footer--morado{
+    background: #8f57fd;
 }
 
 .main {
@@ -91,7 +119,7 @@ body {
     outline: none;
 }
 
-.input_buscador::placeholder{
+.input__buscador::placeholder{
     color: white;
 }
 
@@ -197,7 +225,7 @@ body {
 
 .carousel-item__details--subtitle {
     color: white;
-    font-size: px;
+    font-size: 10px;
 }
 
 .carousel-item__details--icons img {
@@ -214,7 +242,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding:  0px 30px ;
-    min-height: calc(106.9vh - 200px);
+    min-height: calc(101vh - 200px);
 }
 
 /* Elemento */
@@ -227,6 +255,9 @@ body {
     min-height: 700px;
     width: 300px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .login__form{
@@ -235,7 +266,6 @@ body {
 }
 
 .login__rememberme{
-    font-size: 14px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -253,7 +283,11 @@ body {
     text-decoration: underline;
 }
 
-.login__socialmedia{
+.login--font16{
+    font-size: 16px;
+}
+
+.login--font14{
     font-size: 14px;
 }
 
@@ -273,11 +307,84 @@ body {
     margin-left: 10px;
 }
 
-.input {
-    margin-bottom: 10px;
+.login__input{
+    background-color: transparent;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid white;
 }
 
+.login__input::placeholder{
+    color: white;
+}
 
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer__item{
+        margin-bottom: 10px;
+    }
+}
+
+.text {
+    text-align: center;
+    margin-top: 53px;
+    color: #fff;
+    font-size: 50px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+  }
+  .pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+  }
+
+.input {
+    margin-bottom: 10px;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    outline: none;
+}
+
+.button{
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login__botton{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    margin: 15px 0;
+}
 
 /* Modificador*/
 
