@@ -16,10 +16,10 @@
     <main>
         <section class="login"> <!--Bloque -->
             <div class="login__container"> <!--Elemento-->
-                <h2 class="h2--white">Inicia sesión</h2> <!--Modificador-->
+                <h2 tabindex="0" class="h2--white">Inicia sesión</h2> <!--Modificador-->
                 <form class="login__form"> <!--Elemento-->
-                    <input class="input login__input" type="text" placeholder="Correo">  <!--Elemento-->
-                    <input class="input login__input" type="password" placeholder="Contraseña"> <!--Elemento-->
+                    <input aria-label="Correo" class="input login__input" type="text" placeholder="Correo">  <!--Elemento-->
+                    <input  class="input login__input" type="password" placeholder="Contraseña" autocomplete="off"> <!--Elemento-->
                     <button class="button login__botton">Iniciar sesión</button> <!--Elemento-->
                     <div class="login__rememberme login--font14"> <!--Elemento-->
                         <label>
@@ -31,13 +31,13 @@
                 <div class="login--font14"> <!--Modificador-->
                     <div class="login__socialitem"> <!--Elemento-->
                         <img class="login__socialitemimage" src="../icon/icons8-google-plus-50.png" alt=""> <!--Elemento-->
-                        <p class="login__socialparrafo"> <!--Elemento-->
+                        <p tabindex="0" class="login__socialparrafo"> <!--Elemento-->
                             Inicia sesión con Google
                         </p>
                     </div>
                     <div class="login__socialitem"> <!--Elemento-->
                         <img class="login__socialitemimage" src="../icon/icons8-twitter-50.png" alt=""> <!--Elemento-->
-                        <p class="login__socialparrafo"> <!--Elemento-->
+                        <p tabindex="0" class="login__socialparrafo"> <!--Elemento-->
                             Inicia sesión con Twitter
                         </p>
                     </div>
